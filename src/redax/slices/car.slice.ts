@@ -18,9 +18,15 @@ const carSlice = createSlice({
     extraReducers:builder => builder
 });
 
-const {reduser:carReduser} = carSlice;
+
+const {reducer:carReducer} = carSlice;
 
 
 const carActions = {
 
+}
+
+export {
+    carActions,
+    carReducer
 }
