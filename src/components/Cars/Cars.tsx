@@ -3,6 +3,7 @@ import {ICar} from "../../interfaces";
 import {carService} from "../../services";
 import {Car} from "../Car/Car";
 import {carActions} from "../../redax";
+import {useAppDispatch, useAppSelector} from "../../hooks";
 
 const Cars:FC = () => {
 
@@ -11,7 +12,7 @@ const Cars:FC = () => {
 
     useEffect(()=>{
 
-        dispatch(carActions.)
+        dispatch(carActions.getAll())
 
     },[])
 

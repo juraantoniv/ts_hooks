@@ -44,6 +44,7 @@ const {reducer:carReducer} = carSlice;
 
 
 const carActions = {
+    getAll
 
 }
 
