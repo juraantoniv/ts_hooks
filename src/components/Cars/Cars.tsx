@@ -1,6 +1,5 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useEffect} from 'react';
 import {ICar} from "../../interfaces";
-import {carService} from "../../services";
 import {Car} from "../Car/Car";
 import {carActions} from "../../redax";
 import {useAppDispatch, useAppSelector} from "../../hooks";
@@ -14,7 +13,7 @@ const Cars:FC = () => {
 
         dispatch(carActions.getAll())
 
-    },[])
+    },[dispatch])
 
     return (
         <div>
