@@ -2,14 +2,16 @@ import React, {FC, useEffect, useState} from 'react';
 import {ICar} from "../../interfaces";
 import {carService} from "../../services";
 import {Car} from "../Car/Car";
+import {carActions} from "../../redax";
 
 const Cars:FC = () => {
 
-    const [cars,setCars]=useState<ICar[]>([]);
+    const {cars} = useAppSelector(state => state.carReducer);
+    const dispatch = useAppDispatch();
 
     useEffect(()=>{
 
-        carService.getAll().then(({data})=>setCars(data))
+        dispatch(carActions.)
 
     },[])
 
